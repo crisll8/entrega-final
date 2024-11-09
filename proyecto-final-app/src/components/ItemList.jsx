@@ -1,11 +1,17 @@
+// src/components/ItemList.jsx
 import React from 'react';
-import Item from './Item';
+import products from '../data'; // Importar productos desde data.js
 
-const ItemList = ({ products }) => {
+const ItemList = () => {
   return (
-    <div className="item-list">
-      {products.map(product => (
-        <Item key={product.id} product={product} />
+    <div>
+      {products.map((product) => (
+        <div key={product.id}>
+          <img src={product.img} alt={product.name} />
+          <h3>{product.name}</h3>
+          <p>{product.description}</p>
+          <p>Precio: ${product.price}</p>
+        </div>
       ))}
     </div>
   );
