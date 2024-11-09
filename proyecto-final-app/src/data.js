@@ -1,5 +1,3 @@
-// src/data.js
-
 const products = [
     {
       id: 1,
